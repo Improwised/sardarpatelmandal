@@ -1,0 +1,23 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+{{ define "description" }}{{ .Site.Params.description }}{{ end }}
+
+{{ define "main" }}
+  <!-- <div class="bg-light"> -->
+    <div class="container">
+      <div class="row py-3">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-12">
+              <h3>Recent Events</h3>
+            </div>
+            {{ partial "events/recent-list.html" . }}
+          </div>
+        </div>
+        <div class="col-lg-4" style="position: sticky; top: 0;">
+          <!-- <h3>Activities</h3> -->
+          {{ partial "activities/menu.html" . }}
+        </div>        
+      </div>
+    </div>
+  <!-- </div> -->
+{{ end }}

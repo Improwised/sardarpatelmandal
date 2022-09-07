@@ -1,0 +1,18 @@
+{{ $section := "events" }}
+{{ range (where .Site.RegularPages.ByTitle "Section" $section ) }}
+<div class="col-md-{{.Params.width}} pb-3">
+  <div class="card guj-font">
+    {{ if isset .Params "image"}}
+    <img src="{{ .Params.image }}" width="100%" class="br-0_25rem" />
+    {{ end }}
+    <div class="card-body">
+      <h5 class="card-title">{{ .Params.title }}</h5>
+      <p class="card-text">{{ .Summary }}</p>
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="{{.Permalink}}" class="card-link">Read More</a>
+        <p class="card-text"><small class="text-muted">{{ .Params.Date | time.Format ":date_long" }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

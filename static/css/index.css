@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html, 
+body {
+	height: 100%;
+	font-size: 16px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.guj-font {
+	font-family: 'Noto Sans Gujarati', sans-serif;
+}
+
+.bg-gold {
+	background-color: #ffd700;
+}
+
+.bg-custom-gray {
+	background-color: #f3eee9;
+
+}
+
+.h100p {
+	height: 100%;
+}
+
+.card {
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.bs1 {
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.br-0_25rem {
+	border-radius: 0.25rem;
+}
+
+.title-style {
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background: linear-gradient(90deg, rgba(255,153,51,0.5) 0%, rgba(255,153,51,1) 0%, rgba(255,153,51,1) 100%, rgba(255,153,51,0.5) 100%);
+}
+
+@media only screen and (min-width: 320px) {
+	.title-style h1 {
+		margin-top: 15px;
+		font-size: 18px;
+	}	
+}
+
+@media only screen and (min-width: 900px) {
+	.title-style h1 {
+		font-size: 28px;
+	}	
+}
+
+/*body {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("/images/2.jpg");
+}*/
