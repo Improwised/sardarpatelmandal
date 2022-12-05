@@ -1,0 +1,11 @@
+{{ range .Pages }}
+<div class="col-md-{{.Params.width}} pb-3">
+  <a href="{{.Permalink}}" class="card-link guj-font">
+    <div class="card ">
+      <div class="card-body">
+      <h5 class="card-title m-0">{{ .Params.title }}</h5>
+      </div>
+    </div>
+  </a>
+</div>
+{{ end }}
