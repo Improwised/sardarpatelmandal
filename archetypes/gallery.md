@@ -4,6 +4,8 @@ date: {{ .Date }}
 draft: true
 width: 12
 image: ""
+metaTitle: ""
+metaDes: ""
 ---
 
 {{< load-photoswipe >}}

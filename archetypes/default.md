@@ -1,8 +1,10 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+draft: false
 width: 12
 image: ""
+metaTitle: ""
+metaDes: ""
 ---
 

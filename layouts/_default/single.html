@@ -8,15 +8,17 @@
         <div class="row">
           <div class="col-lg-12">
             <h3>{{ .Title }}</h3>
-            <div class="guj-font">
-              {{ .Content }}
+            <link rel="stylesheet" type="text/css" href="/css/github-markdown-light-min.css">
+            <div class="markdown-body">
+              <div class="guj-font">
+                {{ .Content }}
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-4" style="position: sticky; top: 0;">
-        <!-- <h3>Activities</h3> -->
-        {{ partial "activities/menu.html" . }}
+        {{ partial "sidebar-menu.html" . }}
       </div>
     </div>
   </div>

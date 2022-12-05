@@ -1,11 +1,12 @@
 ---
 title: "Past"
 date: 2022-08-24T16:09:16+05:30
-draft: false
+draft: true
 width: 12
 image: ""
+metaTitle: ""
+metaDes: ""
 ---
 
-hello hello hello
 {{< load-photoswipe >}}
 {{< gallery dir="/images/" />}}
