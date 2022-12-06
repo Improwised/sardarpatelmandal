@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://sspkmandal.improwised.dev/sitemap.xml
