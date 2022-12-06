@@ -11,8 +11,8 @@
 		<!--  -->
 		<link rel="stylesheet" type="text/css" href="/css/index.css">
 
-		<title>{{ if .Params.metaTitle }}{{ .Params.metaTitle }}{{ else }}{{ block "title" . }}{{ end }}{{ end }}</title>
-		<meta name="description" content="{{ if .Params.metaDes }}{{ .Params.metaDes }} {{ else if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Params.metaDes }}{{ end }}"/>
+		<title>{{ if .Params.metaTitle }}{{ .Params.metaTitle }} | {{ .Site.Title }}{{ else }}{{ block "title" . }}{{ end }}{{ end }}</title>
+		<meta name="description" content="{{ if .Params.metaDes }}{{ .Params.metaDes }} | {{ .Site.Title }}{{ else if .Summary }}{{ .Summary }} | {{ .Site.Title }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
 
 		<meta name="robots" content="index, follow">
 		<meta http-equiv="Status" content="410 Gone">

@@ -5,7 +5,7 @@ draft: false
 width: 12
 image: ""
 type: "activities"
-metaTitle: ""
+metaTitle: "Activites"
 metaDes: ""
 ---
 

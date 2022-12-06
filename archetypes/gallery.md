@@ -4,7 +4,7 @@ date: {{ .Date }}
 draft: true
 width: 12
 image: ""
-metaTitle: ""
+metaTitle: "Gallery | Shree Sardar Patel Employees Group, Rajkot"
 metaDes: ""
 ---
 

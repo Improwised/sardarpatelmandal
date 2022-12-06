@@ -5,8 +5,8 @@ draft: false
 width: 12
 image: ""
 type: "contact-us"
-metaTitle: ""
-metaDes: ""
+metaTitle: "Contact us"
+metaDes: "મંડળના email [sspkmandal@gmail.com](mailto:sspkmandal@gmail.com) ઉપર તમારા વિચારો, સુજાવ અને કાર્યક્રમ વિશે લખીને મોકલી શકશે."
 ---
 
 ઓફીસ નં.૩૧૨/એ, ત્રીજો માળ, ધી મિલેનિયમ,   

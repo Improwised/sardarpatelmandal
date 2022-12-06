@@ -5,7 +5,7 @@ draft: false
 width: 12
 image: ""
 type: "about-us"
-metaTitle: ""
+metaTitle: "About us"
 metaDes: ""
 ---
 
