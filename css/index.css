@@ -91,6 +91,10 @@ a {
   z-index: 2;
 }
 
+.n-width {
+  width: 225px;
+}
+
 @media only screen and (min-width: 320px) {
   .title-style {
     height: 57px;
@@ -118,6 +122,12 @@ a {
   .navbar-brand-sardar-patel-img {
     height: 65px;
   }*/
+}
+
+@media only screen and (min-width: 768px) {
+  .n-width {
+    width: auto;
+  }
 }
 
 @media only screen and (min-width: 900px) {
