@@ -20,16 +20,16 @@
   <body>
     {{ partial "navigation.html" . }}
     
-    {{ block "main" . }}
-      <!-- Main Content -->
-    {{ end }}
+    <div style="min-height: calc(100vh - 271px);">
+      {{ block "main" . }}
+        <!-- Main Content -->
+      {{ end }}
+    </div>
 
-    <footer class="text-center bg-dark py-2 text-light guj-font">
-      © <span id="year">2022</span> શ્રી સરદાર પટેલ કર્મચારી મંડળ, રાજકોટ.
+    <footer class="text-center bg-dark py-2 text-light guj-font px-1">
+      © <span id="year">2022</span> શ્રી સરદાર પટેલ કર્મચારી મંડળ, ટ્રસ્ટ રજી. નં. એ/ર૬૦૧ તા. ૧૬-ર-૯૪, રાજકોટ.
       <br>
-      <div class="d-block d-md-none">
-        {{ partial "address.html" . }}
-      </div>
+      {{ partial "address.html" . }}  
     </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
