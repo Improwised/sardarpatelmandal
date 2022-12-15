@@ -43,6 +43,14 @@
     -->
     <script type="text/javascript">
       document.getElementById("year").innerHTML = new Date().getFullYear();
+
+      document.querySelectorAll(".nav-item a").forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("text-brand");
+        } else {
+          link.classList.remove("text-brand");
+        }
+      });
     </script>
   </body>
 </html>
