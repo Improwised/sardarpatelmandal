@@ -8,5 +8,3 @@ metaTitle: "Gallery"
 metaDes: ""
 ---
 
-{{< load-photoswipe >}}
-{{< gallery dir="/images/" />}}

@@ -1,41 +1,50 @@
-<!--
-Put this file in /layouts/shortcodes/gallery.html
-Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
--->
-<!-- count how many times we've called this shortcode; load the css if it's the first time -->
-{{- if not ($.Page.Scratch.Get "figurecount") }}<link rel="stylesheet" href={{ "css/hugo-easy-gallery.css" | relURL }} />{{ end }}
-{{- $.Page.Scratch.Add "figurecount" 1 }}
-{{ $baseURL := .Site.BaseURL }}
-<div class="gallery caption-position-{{ with .Get "caption-position" | default "bottom" }}{{.}}{{end}} caption-effect-{{ with .Get "caption-effect" | default "slide" }}{{.}}{{end}} hover-effect-{{ with .Get "hover-effect" | default "zoom" }}{{.}}{{end}} {{ if ne (.Get "hover-transition") "none" }}hover-transition{{end}}" itemscope itemtype="http://schema.org/ImageGallery">
-	{{- with (.Get "dir") -}}
-		<!-- If a directory was specified, generate figures for all of the images in the directory -->
-		{{- $files := readDir (print "/static/" .) }}
-		{{- range $files -}}
-			<!-- skip files that aren't images, or that include the thumb suffix in their name -->
-			{{- $thumbext := $.Get "thumb" | default "-thumb" }}
-			{{- $isthumb := .Name | findRE ($thumbext | printf "%s\\.") }}<!-- is the current file a thumbnail image? -->
-			{{- $isimg := lower .Name | findRE "\\.(gif|jpg|jpeg|tiff|png|bmp|webp|avif|jxl)" }}<!-- is the current file an image? -->
-			{{- if and $isimg (not $isthumb) }}
-				{{- $caption :=  .Name | replaceRE "\\..*" "" | humanize }}<!-- humanized filename without extension -->
-				{{- $linkURL := print $baseURL ($.Get "dir") "/" .Name | absURL }}<!-- absolute URL to hi-res image -->
-				{{- $thumb := .Name | replaceRE "(\\.)" ($thumbext | printf "%s.") }}<!-- filename of thumbnail image -->
-				{{- $thumbexists := where $files "Name" $thumb }}<!-- does a thumbnail image exist? --> 
-				{{- $thumbURL := print $baseURL ($.Get "dir") "/" $thumb | absURL }}<!-- absolute URL to thumbnail image -->
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}');" >
-				      <img itemprop="thumbnail" src="{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}" alt="{{ $caption }}" /><!-- <img> hidden if in .gallery -->
-				    </div>
-			      <figcaption>
-		          <p>{{ $caption }}</p>
-			      </figcaption>
-				    <a href="{{ $linkURL }}" itemprop="contentUrl"></a><!-- put <a> last so it is stacked on top -->
-				  </figure>
-				</div>
-			{{- end }}
-		{{- end }}
-	{{- else -}}
-		<!-- If no directory was specified, include any figure shortcodes called within the gallery -->
-	  {{ .Inner }}
-	{{- end }}
+<div>
+  <style>
+    #galary .modal-dialog {
+	    max-width: 1120px;
+	    margin: 0.5rem auto;
+    }
+    @media (min-width: 576px) {
+	    #galary .modal-dialog {
+	    }			
+    }
+  </style>
+  <div class="d-flex align-items-center flex-wrap justify-content-center">
+    {{ range $index, $image := .Page.Resources.ByType "image" }}
+    {{ $url := $.Page.Resources.GetMatch $image }}
+    {{ $url := $url.Fit "320x180" }}
+    <div class="p-1" data-bs-toggle="modal" data-bs-target="#galary" >
+      <img src="{{ $url.RelPermalink }}" data-bs-target="#carouselExample" data-bs-slide-to="{{$index}}"/>
+    </div>
+    {{ end }}
+  </div>
+  <div class="modal fade" id="galary" tabindex="-1" aria-labelledby="galaryLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered model-lg">
+      <div class="modal-content bg-dark">
+        <div class="modal-body">
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              {{ range $index, $image := .Page.Resources.ByType "image" }}
+              {{ $url := $.Page.Resources.GetMatch $image }}
+              {{ $url := $url.Resize "1086x" }}
+              <div class='carousel-item{{ if eq $index 0 }} active{{ end }}'>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img src="{{ $url.RelPermalink }}" class="w-100" />
+                </div>
+              </div>
+              {{ end }}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+	            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+	            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	            <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
