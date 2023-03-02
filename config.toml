@@ -1,6 +1,6 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'Shree Sardar Patel Employees Group, Rajkot | શ્રી સરદાર પટેલ કર્મચારી મંડળ'
+timeout = '300000'
 [Params]
   description = 'Shree Sardar Patel Employees Group, Rajkot | શ્રી સરદાર પટેલ કર્મચારી મંડળ'
-timeout = "300s"
