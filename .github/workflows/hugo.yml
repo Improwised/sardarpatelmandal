@@ -8,9 +8,7 @@ on:
 
 jobs:
   deploy:
-    timeout-minutes: 30
-    runs-on: [self-hosted]
-#     runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
         with:
@@ -24,8 +22,7 @@ jobs:
           # extended: true
 
       - name: Build
-        run: hugo -v
-        timeout-minutes: 5
+        run: hugo
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
