@@ -1,5 +1,5 @@
 {{ $section := "events" }}
-{{ range (where .Site.RegularPages.ByTitle "Section" $section ) }}
+{{ range (where .Site.RegularPages "Section" $section ) }}
 <div class="col-md-{{.Params.width}} pb-3">
   <div class="card guj-font">
     <div class="card-body">
@@ -7,7 +7,7 @@
       {{ if isset .Params "image"}}
         <img src="{{ .Params.image }}" class="w-100" />
       {{ end }}
-      <p class="card-text">{{ .Summary }}</p>
+      <p class="card-text">{{ .Summary | truncate 500 " ..." }}</p>
       <div class="d-flex align-items-center justify-content-between">
         <a href="{{.Permalink}}" class="card-link">Read More</a>
         <p class="card-text"><small class="text-muted">{{ .Params.Date | time.Format ":date_long" }}</small></p>
