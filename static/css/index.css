@@ -89,3 +89,9 @@ a {
     font-size: 28px;
   }
 }
+
+.card.custom-card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px #cfcfcf;
+}

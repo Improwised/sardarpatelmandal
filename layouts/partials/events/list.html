@@ -1,11 +1,11 @@
 {{ range .Pages }}
 <div class="col-md-{{.Params.width}} pb-3">
   <div class="card guj-font">
-    {{ if isset .Params "image"}}
-    <img src="{{ .Params.image }}" width="100%" class="br-0_25rem" />
-    {{ end }}
     <div class="card-body">
       <h5 class="card-title">{{ .Params.title }}</h5>
+      {{ if and (isset .Params "image") (gt (len .Params.image) 0) }}
+      <img src="{{ .Params.image }}" width="100%" class="br-0_25rem" />
+      {{ end }}
       <p class="card-text">{{ .Summary }}</p>
       <div class="d-flex align-items-center justify-content-between">
         <a href="{{.Permalink}}" class="card-link">Read More</a>
