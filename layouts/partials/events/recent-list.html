@@ -4,7 +4,7 @@
   <div class="card guj-font">
     <div class="card-body">
       <h5 class="card-title">{{ .Params.title }}</h5>
-      {{ if isset .Params "image"}}
+      {{ if and (isset .Params "image") (gt (len .Params.image) 0) }}
         <img src="{{ .Params.image }}" class="w-100" />
       {{ end }}
       <p class="card-text">{{ .Summary | truncate 500 " ..." }}</p>

@@ -4,7 +4,7 @@ date: {{ .Date }}
 draft: false
 width: 12
 image: ""
-metaTitle: ""
+metaTitle: "{{ replace .Name '-' ' ' | title }} | Shree Sardar Patel Employees Group, Rajkot"
 metaDes: ""
 ---
 
