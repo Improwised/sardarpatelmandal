@@ -1,7 +1,7 @@
 ---
 title: "ભવ્ય રાસોત્સવ - 2023"
 date: 2023-10-10T15:02:10+05:30
-draft: false
+draft: true
 width: 12
 image: ""
 metaTitle: ""
