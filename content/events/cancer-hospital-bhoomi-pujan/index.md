@@ -1,10 +1,10 @@
 ---
-title: "Cancer Hospital Bhoomi Pujan"
+title: "વિશાળ સુવિધા યુક્ત અને આધુનિક ટેકનોલોજી સાથે કેન્સર હોસ્પિટલ ના નિર્માણ નું ભૂમિ પૂજન"
 date: 2024-01-18T12:22:41+05:30
 draft: false
 width: 12
 image: ""
-metaTitle: "Cancer-Hospital-Bhoomi-Pujan | Shree Sardar Patel Employees Group, Rajkot"
+metaTitle: "વિશાળ સુવિધા યુક્ત અને આધુનિક ટેકનોલોજી સાથે કેન્સર હોસ્પિટલ ના નિર્માણ નું ભૂમિ પૂજન | Shree Sardar Patel Employees Group, Rajkot"
 metaDes: ""
 ---
 
@@ -66,7 +66,7 @@ Saving
 312 A - ધી મિલેનિયમ, 150 ફૂટ રીંગ રોડ , નાના મવા સર્કલ પાસે રાજકોટ
 
 **ટેલિફોન:**  
-02812467070
+[02812467070](tel:02812467070)
 
 **મોબાઈલ:**  
-9409003700
+[9409003700](tel:9409003700)
