@@ -8,4 +8,5 @@ metaTitle: ""
 metaDes: ""
 ---
 
+<!--more-->
 ![awareness campaign | Shree Sardar Patel Employees Group, Rajkot](/events/awareness-campaign/images/awareness-campaign.jpeg "Awareness Campaign | Shree Sardar Patel Employees Group, Rajkot")

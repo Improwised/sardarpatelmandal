@@ -9,4 +9,5 @@ metaTitle: ""
 metaDes: ""
 ---
 
+<!--more-->
 ![annual general meeting 2022 2023 | Shree Sardar Patel Employees Group, Rajkot](/events/annual-general-meeting-2022-2023/images/annual-general-meeting-2022-2023.jpeg "Annual General Meeting 2022 2023 | Shree Sardar Patel Employees Group, Rajkot")
