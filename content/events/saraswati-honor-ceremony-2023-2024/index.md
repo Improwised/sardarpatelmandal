@@ -8,4 +8,5 @@ metaTitle: "સરસ્વતી સન્માન સમારોહ - 2023 2
 metaDes: ""
 ---
 
+<!--more-->
 ![સરસ્વતી સન્માન સમારોહ - 2023 2024 | Shree Sardar Patel Employees Group, Rajkot](/events/saraswati-honor-ceremony-2023-2024/images/saraswati-honor-ceremony-2023-2024.jpg "સરસ્વતી સન્માન સમારોહ - 2023 2024 | Shree Sardar Patel Employees Group, Rajkot")

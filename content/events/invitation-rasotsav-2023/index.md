@@ -8,6 +8,7 @@ metaTitle: "રાસોત્સવ 2023 નું આમંત્રણ | Shre
 metaDes: ""
 ---
 
+<!--more-->
 ![રાસોત્સવ 2023 નું આમંત્રણ | Shree Sardar Patel Employees Group, Rajkot](/events/invitation-rasotsav-2023/images/invitation-rasotsav-2023.jpg "રાસોત્સવ 2023 નું આમંત્રણ | Shree Sardar Patel Employees Group, Rajkot")
 
 
